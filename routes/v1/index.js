@@ -8,5 +8,7 @@ const router = express.Router();
 // router.get('/info',(req,res)=>{
 //     res.json({"msg" : "OK"})
 // })
+const bookingRoutes = require('./booking');
+router.use('/bookings',bookingRoutes)
 router.get('/info',infoController.info); //Here we do registration using Router object and we bind the controller 
 module.exports = router; // we can export this router object anywhere
